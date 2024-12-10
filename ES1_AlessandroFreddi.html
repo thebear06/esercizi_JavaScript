@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esercizio 1</title>
+</head>
+<style>
+    table tr, th{
+        border: 1px solid black;
+    }
+</style>
+<body>
+    <form id = "myForm">
+        <table>
+            <tr>
+                <th>ID Studente</th>
+                <th><input type="number" id="id" name="IDStudente" required></th>
+            </tr>
+            <tr>
+                <th>Ore di frequenza</th>
+                <th><input type="number" id="ore" name="OreDiFrequenza" required></th>
+            </tr>
+            <tr>
+                <th><button type="button" id="aggIscrizione">Aggiungi iscrizione<button type="button" id="mostraIscrizioni">Mostra Iscrizioni</button></th>
+            </tr>
+        </table>
+    </form>
+</body>
+<script>
+    Array = new Array()
+
+    function prezzo(){
+        prezzo = ore*15
+        if(ore <= 10){
+            "nessun sconto assegnato"
+        }
+        else if(ore > 10 && ore <= 20){
+            sconto = (prezzo * 5) / 100
+            prezzo = prezzo - sconto
+        }
+        else{
+            sconto = (prezzo * 10) / 100
+            prezzo = prezzo - sconto
+        }
+    }
+
+    let oreFrequenza = document.getElementById("ore").value;
+    let id = []
+    Array.push({id: id, ore: ore, prezzo: 15})
+    for(let id of id){
+        let table = `<table>
+                   <tr>
+                   <td>${id.table}</td>
+                   <td>${ore.table}</td>
+                   <td>${prezzo.table}</td>
+                   </tr>`
+    }
+</script>
+</html>
